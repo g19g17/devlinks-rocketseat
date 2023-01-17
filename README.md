@@ -35,7 +35,3 @@ Curso gratuito promovido pela Rocketseat.
 
 Página de amostra de perfil/portfólio criada no curso online e gratuito promovido pela Rocketseat, plataforma de ensino de Desenvolvimendo WEB
 
-## Licença
----
-
-Esse projeto está sob a licença MIT.

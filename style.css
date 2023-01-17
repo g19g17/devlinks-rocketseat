@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* DARK/LIGHT MODE */
+
+.dark { 
+  /*variáveis*/
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile-dark.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+  --highlight-img: url(./assets/cof-profile-dark.png);
+  --user-tags-color: rgba(73, 11, 85, 0.344);
+  --user-tags-border-color-: rgba(166, 18, 195, 0.382);
+}
+
+.light { 
+  /*variáveis*/
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun-stars.svg);
+  --highlight-img: url(./assets/cof-profile-light.png);
+  --user-tags-color: rgba(141, 14, 167, 0.144);
+  --user-tags-border-color-: rgba(49, 8, 57, 0.538);
+}
+
+/* BODY SECTION */
+
+body {
+  /*
+  background: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*background: url img repeat position/size */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+/* CONTAINER */
+
+#container {
+  width: 100%; /* Ajustando a largura para outros dispositivos */
+  max-width: 580px; /* largura máxima do container */
+  margin: auto;
+  margin-top: 56px;
+  padding: 30px 24px;
+}
+
+/* PROFILE */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  border-radius: 100px;
+}
+
+#profile h2 {
+  font-weight: 800; /*valor em negrito da fonte*/
+  line-height: 24px; /*largura da linha*/
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#profile p {
+  font-weight: 500; /*valor em negrito da fonte*/
+  line-height: 24px; /*largura da linha*/
+  margin-top: 10px;
+}
+
+#profile span {
+  background-color: var(--user-tags-color);
+  border-radius: 10px;
+  border: 1px solid var(--user-tags-border-color-);
+  padding: 3px 5px;
+}
+
+#profile p span:hover {
+  opacity: 50%;
+}
+
+/* SWITCH */
+
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+  margin-top: 20px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: none;
+  border-radius: 50%;
+
+  position: absolute; /* o elemento possui 100% do Y */
+  top: 50%; /* coloca o elemento do 50% que sobrou */
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%); /* remove 50% */
+
+  animation: slide-back 0.2s;
+}
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+}
+
+/* LIST */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: all 0.5s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* SOCIAL LINKS */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0px;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+/* BASEBOARD */
+
+footer {
+  text-align: center;
+}
+
+footer span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 700px) { /* quando a largura da tela for no minimo 700px a cima: */
+  
+  :root { /* a imagem de fundo irá mudar para a imagem de desktop no modo dark */
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  .light { /* a imagem de fundo irá mudar para a imagem de desktop no modo light */
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* ANIMATION */
+
+@keyframes slide-in { /* tipo: animação, nome da animação: slide-in */
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

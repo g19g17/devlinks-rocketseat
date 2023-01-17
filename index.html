@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+  <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:ital,wght@0,400;0,500;0,900;1,400&display=swap" rel="stylesheet"> <!-- Link da fonte utilizada --> 
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="style.css"> <!-- Carregar o CSS no HTML --> 
+
+    <link rel="shortcut icon" href="./assets/cof-profile-dark.png" sizes="48x48" type="image/x-icon"> <!-- Icone da aba do site -->
+
+    <meta name="author" content="Gabriel Melo"> <!-- Criador do site -->
+    <meta name="description" content="Meu site de Portfólio"> <!-- Descrição do site -->
+    
+    <title>G19g17 | DevLinks</title> <!-- Nome da página -->
+  </head>
+  <body>
+    <div id="container">
+
+      <!-- BASIC PROFILE INFO -->
+
+      <div id="profile">
+        <img src="./assets/cof-profile-dark.png" alt="foto de perfil do usuário g19g17">
+        <h2>g19g17</h2>
+        <p>
+          <span>Front-End</span>
+          <span>Gamedev</span>
+        </p>
+        
+      </div>
+
+      <!-- SWHITCH BUTTON -->
+
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+
+      <!-- LIST BUTTONS -->
+
+      <ul>
+        <li>
+          <a target="_blank" href="https://github.com/g19g17">Meu Portfólio</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://app.rocketseat.com.br/me/g19g17-04911">Perfil da Rocketseat</a>
+        </li>
+      </ul>
+
+      <!-- SOCIAL LINKS -->
+
+      <div id="social-links">
+        <a href="https://www.linkedin.com/in/g19g17/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.reddit.com/user/g19g17_H13" target="_blank">
+          <ion-icon name="logo-reddit"></ion-icon>
+        </a>
+        <a href="https://github.com/g19g17" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </div>
+
+      <!-- BASEBOARD (RODAPÉ) -->
+
+      <footer>
+        Feito por <span>Gabriel Melo</span>
+      </footer>
+    </div>
+
+    <!-- ICONS SOCIAL LINKS-->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!-- LOAD THE JAVASCRIPT IN HTML -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
